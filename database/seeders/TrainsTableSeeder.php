@@ -15,7 +15,9 @@ class TrainsTableSeeder extends Seeder
      * @return void
      */
     public function run(Faker $faker)
-    {
+    {   
+        for($i = 0; $i >= 3; $i++) {
+
         // istanziare un oggetto del modello
         $newTrain = new Train();
         // inserisci nuovi dati
@@ -33,5 +35,6 @@ class TrainsTableSeeder extends Seeder
 
         // salvo i dati nel database
         $newTrain->save();
+        }
     }
 }
